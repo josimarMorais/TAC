@@ -12,7 +12,7 @@
 [Decisões do projeto](https://docs.google.com/document/d/1uN10BdIGWlXjlrKAmqISiACAF1zdSkVEZRUIw75a-lk/edit)
 
 [Diagrama Conceitual](https://app.diagrams.net/#G18rjH2jCuIR5_xxoHG8ZojmFsLTeFzyR_) | 
-[Diagrama CPBN](https://app.diagrams.net/#G1aX2C7oTOPc7fpp1uz72yipSwnlb0vUey) | 
+[Diagrama CPBN](https://app.diagrams.net/#G1Cf03F5cZs7TZOp3ES1u9eZncYLnx8ktW) | 
 [Diagrama AAN](https://app.diagrams.net/#G1WY9ZC4Qar_VQZk9-WE0CO_XXNiL1uUoc) | 
 [Diagrama DCP](https://app.diagrams.net/#G1Cf03F5cZs7TZOp3ES1u9eZncYLnx8ktW) | 
 [Diagrama ER](https://app.diagrams.net/#G1hGWfN1XJPeJ2akuPNhO9btyuWveZ7z_Y)
