@@ -13,7 +13,35 @@ const User = db.define('users', {
         type: Sequelize.STRING,
         allowNull: false,
     },
+    adress: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    complement: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    district: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    zipcode: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    city: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    state: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    password: {
         type: Sequelize.STRING,
         allowNull: false,
     }
