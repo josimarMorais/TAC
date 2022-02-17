@@ -1,3 +1,8 @@
+## Dependencies
+
+Install all dependencies indicated by package.json
+### npm install
+
 ## Available Scripts
 
 In the project directory, you can run:
