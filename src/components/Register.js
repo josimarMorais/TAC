@@ -3,16 +3,12 @@ import React, { Component, useState } from "react";
 export default function Register() {
 
     const [name, setName] = useState('');
-    const [adress, setAdress] = useState('');
-    const [complement, setComplement] = useState('');
-    const [district, setDistrict] = useState('');
-    const [zipcode, setZipcode] = useState('');
-    const [city, setCity] = useState('');
-    const [state, setState] = useState('');
+    const [fone, setFone] = useState('');
+    const [tipo, setTipo] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleSubmit(){
+    function handleSubmit() {
         const data = {
 
         }
@@ -38,70 +34,25 @@ export default function Register() {
             <p />
 
             <div className="form-group">
-                <label>Adress</label>
+                <label>Fone</label>
                 <input
-                    id="adress"
-                    name="adress"
+                    id="fone"
+                    name="fone"
                     type="text"
                     className="form-control"
-                    placeholder="Logradouro"
-                    value={adress}
-                    onChange={e => setAdress(e.target.value)}
+                    placeholder="Telefone"
+                    value={fone}
+                    onChange={e => setFone(e.target.value)}
                 />
+                <p />
 
-                <label>Complement</label>
-                <input
-                    id="complement"
-                    name="complement"
-                    type="text"
-                    className="form-control"
-                    placeholder="Complement"
-                    value={complement}
-                    onChange={e => setComplement(e.target.value)}
-                />
-
-                <label>District</label>
-                <input
-                    id="district"
-                    name="district"
-                    type="text"
-                    className="form-control"
-                    placeholder="District"
-                    value={district}
-                    onChange={e => setDistrict(e.target.value)}
-                />
-
-                <label>Zip-code</label>
-                <input
-                    id="zipcode"
-                    name="zipcode"
-                    type="text"
-                    className="form-control"
-                    placeholder="Zip code"
-                    value={zipcode}
-                    onChange={e => setZipcode(e.target.value)}
-                />
-                <label>City</label>
-                <input i
-                    d="city"
-                    name="city"
-                    type="text"
-                    className="form-control"
-                    placeholder="City"
-                    value={city}
-                    onChange={e => setCity(e.target.value)}
-                />
-
-                <label>State</label>
-                <input
-                    id="state"
-                    name="state"
-                    type="text"
-                    className="form-control"
-                    placeholder="State"
-                    value={state}
-                    onChange={e => setState(e.target.value)}
-                />
+                <div className="form-group">
+                    <label>Tipo de Usuario</label>
+                    <select value={tipo} onChange={e => setTipo(e.target.value)} >
+                        <option value="Usuario">Usuario</option>
+                        <option value="Engenheiro de Software">Engenheiro de Software</option>
+                    </select>
+                </div>
 
             </div>
             <p />

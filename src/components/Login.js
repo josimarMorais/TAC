@@ -3,7 +3,7 @@ export default function Login () {
 
         return (
             <form>
-                <h3>Sign In</h3>
+                <h3>Login</h3>
                 <div className="form-group">
                     <label>E-mail</label>
                     <input type="email" className="form-control" placeholder="Enter email" />
