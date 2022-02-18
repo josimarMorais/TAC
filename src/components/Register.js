@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 
+//Formulário de registro para cadastro
 export default function Register() {
 
     const [name, setName] = useState('');

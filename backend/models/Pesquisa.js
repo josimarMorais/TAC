@@ -1,27 +1,17 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
 
-//Define a tabela de usuarios e suas colunas, conforme documentação do sequelize
-const User = db.define('users', {
+//Define a tabela de pesquisa e suas colunas, conforme documentação do sequelize
+const Pesquisa = db.define('pesquisa', {
     name: {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    fone: {
+    descricao: {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    tipo: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false,
-    },
-
-    password: {
+    tcle: {
         type: Sequelize.STRING,
         allowNull: false,
     }
@@ -29,7 +19,7 @@ const User = db.define('users', {
 });
 
 //Verifica se há alguma diferença na tabela, atualiza conforme model.
-User.sync();
+Pesquisa.sync();
 
 
-module.exports = User;
+module.exports = Pesquisa;

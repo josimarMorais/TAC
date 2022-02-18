@@ -2,12 +2,15 @@ const express = require('express');
 const App = express();
 const User = require('./models/User');
 
+//Recebe o express json na aplicação APP
 App.use(express.json());
 
+//Metodo get da api, onde será retornado as informações da api
 App.get("/", async (req, res) => {
     res.send("Pagina Inicial");
 });
 
+//Metodo post para gravação dos dados enviados da requisição para o banco.
 App.post("/register", async (req, res) => {
     //console.log(req.body);
 
@@ -25,11 +28,7 @@ App.post("/register", async (req, res) => {
         });
 });
 
-/*App.post('/register', function (req, res) {
-    res.send('É Possivel registrar aqui');
-  });*/
-
-
+  // Roda o servidor e atribui a porta em que será usada
 App.listen(8080, () => {
     console.log("Servidor iniciado na porta 8080: http://localhost:8080")
 })
