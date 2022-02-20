@@ -6,12 +6,13 @@ const User = require('./models/User');
 App.use(express.json());
 
 //Metodo get da api, onde será retornado as informações da api
-App.get("/", async (req, res) => {
-    res.send("Pagina Inicial");
+App.get("/api/users", async (req, res) => {
+    const users = await User.findAll();
+    res.send(users);
 });
 
 //Metodo post para gravação dos dados enviados da requisição para o banco.
-App.post("/register", async (req, res) => {
+App.post("/api/register", async (req, res) => {
     //console.log(req.body);
 
     await User.create(req.body)

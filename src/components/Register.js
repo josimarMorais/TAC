@@ -1,4 +1,5 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
+import api from "../services/api";
 
 //Formulário de registro para cadastro
 export default function Register() {
@@ -9,15 +10,30 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function handleSubmit() {
+    //Função que envia os dados para o backend
+    async function handleSubmit() {
         const data = {
+            name: name,
+            fone: fone,
+            tipo: tipo,
+            email: email,
+            password: password
+        }
 
+        console.log(data)
+        const response = await api.post('register', data);
+                
+        if(response.status===200){
+            //window.location.href='/login'
+            console.log("Erro")
+        }else{
+            alert('Erro ao cadastrar o usuário!')
         }
     }
 
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <h3>Register</h3>
             <div className="form-group">
                 <label>Full name</label>

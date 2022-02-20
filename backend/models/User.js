@@ -28,8 +28,10 @@ const User = db.define('users', {
 
 });
 
-//Verifica se há alguma diferença na tabela, atualiza conforme model.
+// Cria tabela
 User.sync();
 
+//Verifica se há alguma diferença na tabela, atualiza conforme model.
+//User.sync({ alter: true })
 
 module.exports = User;

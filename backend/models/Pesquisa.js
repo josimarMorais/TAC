@@ -18,7 +18,7 @@ const Pesquisa = db.define('pesquisa', {
 
 });
 
-//Verifica se há alguma diferença na tabela, atualiza conforme model.
+//Cria tabela, conforme definido acima
 Pesquisa.sync();
 
 
