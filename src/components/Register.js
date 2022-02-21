@@ -10,7 +10,7 @@ export default function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    //Função que envia os dados para o backend
+    //Função que define os dados do formuário e envia os dados para o backend
     async function handleSubmit() {
         const data = {
             name: name,
@@ -21,23 +21,25 @@ export default function Register() {
         }
 
         console.log(data)
-        const response = await api.post('register', data);
-                
-        if(response.status===200){
+        //Envio dos dados para api
+        const response = await api.post('http://localhost:8080/api/register', data);
+
+        if (response.status === 200) {
             //window.location.href='/login'
             console.log("Erro")
-        }else{
+        } else {
             alert('Erro ao cadastrar o usuário!')
         }
     }
 
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form >
             <h3>Register</h3>
             <div className="form-group">
                 <label>Full name</label>
                 <input
+                    required
                     id="name"
                     name="name"
                     type="text"
@@ -53,6 +55,7 @@ export default function Register() {
             <div className="form-group">
                 <label>Fone</label>
                 <input
+                    required
                     id="fone"
                     name="fone"
                     type="text"
@@ -66,7 +69,7 @@ export default function Register() {
                 <div className="form-group">
                     <label>Tipo de Usuario</label>
                     <select value={tipo} onChange={e => setTipo(e.target.value)} >
-                        <option value="Usuario">Usuario</option>
+                        <option value="Usuario" >Usuario</option>
                         <option value="Engenheiro de Software">Engenheiro de Software</option>
                     </select>
                 </div>
@@ -77,6 +80,7 @@ export default function Register() {
             <div className="form-group">
                 <label>Email address</label>
                 <input
+                    required
                     type="email"
                     id="email"
                     name="email"
@@ -90,6 +94,7 @@ export default function Register() {
             <div className="form-group">
                 <label>Password</label>
                 <input
+                    required
                     type="password"
                     id="password"
                     name="password"
